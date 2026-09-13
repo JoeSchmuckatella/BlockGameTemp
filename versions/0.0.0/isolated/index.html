@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<title>BlockGameTemp</title>
+		<script type="importmap">
+			{
+				"imports": {
+					"cbor": "../../../lib/cbor/1.6.4/index.mjs",
+					"three": "../../../lib/three/0.181.0/src/Three.js",
+					"three/": "../../../lib/three/0.181.0/",
+					"three/addons/": "../../../lib/three/0.181.0/examples/jsm/",
+					"zstd": "../../../lib/zstd/1.0.3/index.mjs"
+				}
+			}
+		</script>
+		<script>
+			window.addEventListener("beforeunload", function (e) {
+				e.preventDefault();
+			});
+		</script>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<link rel="stylesheet" href="./css/classes.css"/>
+		<link rel="stylesheet" href="./css/elements.css"/>
+		<link rel="stylesheet" href="./css/ids.css"/>
+	</head>
+	<body>
+		<div class="TopLevelPage" id="/loading_screen_page">
+			<p id="/loading_screen_page/text"></p>
+		</div>
+
+		<div class="TopLevelPage" id="/game_page">
+			<div id="/game_page/hud">
+				<img class="HudItem" id="/game_page/hud/crosshair" src="./assets/textures/gui/crosshair.png"></img>
+
+				<div class="HudItem" id="/game_page/hud/hotbar">
+					<img class="HotbarIcon" id="/game_page/hud/hotbar/hotbar_0" src="./assets/textures/blocks/sod_block_top.png"></img>
+					<img class="HotbarIcon" id="/game_page/hud/hotbar/hotbar_1" src="./assets/textures/blocks/dirt.png"></img>
+					<img class="HotbarIcon" id="/game_page/hud/hotbar/hotbar_2" src="./assets/textures/blocks/stone.png"></img>
+					<img class="HotbarIcon" id="/game_page/hud/hotbar/hotbar_3" src="./assets/textures/blocks/coal_matrix.png"></img>
+					<img class="HotbarIcon" id="/game_page/hud/hotbar/hotbar_4" src="./assets/textures/blocks/iron_ore.png"></img>
+					<img class="HotbarIcon" id="/game_page/hud/hotbar/hotbar_5" src="./assets/textures/blocks/oak_log_top.png"></img>
+					<img class="HotbarIcon" id="/game_page/hud/hotbar/hotbar_6" src="./assets/textures/blocks/oak_leaves.png"></img>
+					<img class="HotbarIcon" id="/game_page/hud/hotbar/hotbar_7" src="./assets/textures/blocks/oak_boards.png"></img>
+					<img class="HotbarIcon" id="/game_page/hud/hotbar/hotbar_8" src="./assets/textures/blocks/carbuncle_matrix.png"></img>
+					<img class="HotbarIcon Selected" id="/game_page/hud/hotbar/hotbar_9" src="./assets/textures/items/iron_pickaxe.png"></img>
+				</div>
+
+				<!-- TODO: Make functional and put this in the bottom left corner. -->
+				<div class="HudItem" id="/game_page/hud/healthbar_group">
+					<p id="/game_page/hud/player_healthbar_group/count"></p>
+					<div id="/game_page/hud/player_healthbar_group/healthbar"></div>
+				</div>
+
+				<div id="/game_page/hud/game_terminal_group">
+					<input type="text" class="GameTerminalIo" id="/game_page/hud/game_terminal_group/input">
+					<p class="GameTerminalIo" id="/game_page/hud/game_terminal_group/output"></p>
+				</div>
+			</div>
+
+			<div id="/game_page/dbg_info">
+				<p class="DbgInfo" id="/game_page/dbg_info/version">Version: <span id="/game_page/dbg_info/version/val"></span></p>
+				<p class="DbgInfo" id="/game_page/dbg_info/fps_counter">FPS: <span id="/game_page/dbg_info/fps_counter/val"></span></p>
+				<p class="DbgInfo" id="/game_page/dbg_info/memory_usage">Memory Usage (Mb): <span id="/game_page/dbg_info/memory_usage/val"></span></p>
+				<p class="DbgInfo" id="/game_page/dbg_info/player_coords">Position: (<span id="/game_page/dbg_info/player_coords/val"></span>)</p>
+				<p class="DbgInfo" id="/game_page/dbg_info/chunk_coords">Chunk: (<span id="/game_page/dbg_info/chunk_coords/val"></span>)</p>
+				<p class="DbgInfo" id="/game_page/dbg_info/player_direction">Facing: <span id="/game_page/dbg_info/player_direction/val"></span></p>
+				<p class="DbgInfo" id="/game_page/dbg_info/targeted_block">Target: <span id="/game_page/dbg_info/targeted_block/val"></span></p>
+			</div>
+
+			<div id="/game_page/pause_menu">
+				<p id="/game_page/pause_menu/header">Game Paused</p>
+				<div id="/game_page/pause_menu/header_underline"></div>
+				<button id="/game_page/pause_menu/back_button" class="PauseMenuButton" style="visibility: hidden; display: none;">Back</button>
+
+				<div id="/game_page/pause_menu/top_level_page" class="PauseMenuInterface">
+					<button id="/game_page/pause_menu/top_level_page/keep_playing_button" class="PauseMenuButton">Keep Playing</button>
+					<button id="/game_page/pause_menu/top_level_page/settings_button" class="PauseMenuButton">Settings</button>
+					<button id="/game_page/pause_menu/top_level_page/accomplishments_button" class="PauseMenuButton">Accomplishments</button>
+					<button id="/game_page/pause_menu/top_level_page/statistics_button" class="PauseMenuButton">Statistics</button>
+					<button id="/game_page/pause_menu/top_level_page/debug_options_button" class="PauseMenuButton">Debug Options</button>
+					<button id="/game_page/pause_menu/top_level_page/save_and_leave_button" class="PauseMenuButton">Save &amp; Leave</button>
+					<button id="/game_page/pause_menu/top_level_page/credits_button" class="PauseMenuButton">Credits</button>
+				</div>
+
+				<div id="/game_page/pause_menu/settings_page" class="PauseMenuInterface" style="visibility: hidden; display: none;">
+					<div>
+					</div>
+					<div class="SettingsSlider" id="/game_page/pause_menu/settings_page/fov_group">
+						<label for="/game_page/pause_menu/settings_page/fov_group/slider_group/slider">FOV</label>
+						<div class="SettingsSliderInner" id="/game_page/pause_menu/settings_page/fov_group/slider_group">
+							<input id="/game_page/pause_menu/settings_page/fov_group/slider_group/slider" type="range" min="40" max="110" step="1" value="80">
+							<p id="/game_page/pause_menu/settings_page/fov_group/slider_group/val">80</p>
+						</div>
+					</div>
+					<div class="SettingsSlider" id="/game_page/pause_menu/settings_page/draw_distance_group">
+						<label for="/game_page/pause_menu/settings_page/draw_distance_group/slider_group/slider">Draw Distance</label>
+						<div class="SettingsSliderInner" id="/game_page/pause_menu/settings_page/draw_distance_group/slider_group">
+							<input id="/game_page/pause_menu/settings_page/draw_distance_group/slider_group/slider" type="range" min="2" max="5" step="1" value="3">
+							<p id="/game_page/pause_menu/settings_page/draw_distance_group/slider_group/val">3</p>
+						</div>
+					</div>
+				</div>
+
+				<div id="/game_page/pause_menu/statistics_page" class="PauseMenuInterface" style="visibility: hidden; display: none;">
+					<p></p>
+				</div>
+
+				<div id="/game_page/pause_menu/debug_page" class="PauseMenuInterface" style="visibility: hidden; display: none;">
+					<div class="SettingsCheckbox" id="/game_page/pause_menu/debug_page/fps_group">
+						<input id="/game_page/pause_menu/debug_page/fps_group/checkbox" type="checkbox" unchecked>
+						<label for="/game_page/pause_menu/debug_page/fps_group/checkbox">FPS Counter</label>
+					</div>
+					<div class="SettingsCheckbox" id="/game_page/pause_menu/debug_page/memory_usage_group">
+						<input id="/game_page/pause_menu/debug_page/memory_usage_group/checkbox" type="checkbox" unchecked>
+						<label for="/game_page/pause_menu/debug_page/memory_usage_group/checkbox">Memory Usage</label>
+					</div>
+					<div class="SettingsCheckbox" id="/game_page/pause_menu/debug_page/player_coords_group">
+						<input id="/game_page/pause_menu/debug_page/player_coords_group/checkbox" type="checkbox" unchecked>
+						<label for="/game_page/pause_menu/debug_page/player_coords_group/checkbox">Player Coordinates</label>
+					</div>
+					<div class="SettingsCheckbox" id="/game_page/pause_menu/debug_page/chunk_coords_group">
+						<input id="/game_page/pause_menu/debug_page/chunk_coords_group/checkbox" type="checkbox" unchecked>
+						<label for="/game_page/pause_menu/debug_page/chunk_coords_group/checkbox">Chunk Coordinates</label>
+					</div>
+					<div class="SettingsCheckbox" id="/game_page/pause_menu/debug_page/player_direction_group">
+						<input id="/game_page/pause_menu/debug_page/player_direction_group/checkbox" type="checkbox" unchecked>
+						<label for="/game_page/pause_menu/debug_page/player_direction_group/checkbox">Player Direction</label>
+					</div>
+					<div class="SettingsCheckbox" id="/game_page/pause_menu/debug_page/targeted_block_group">
+						<input id="/game_page/pause_menu/debug_page/targeted_block_group/checkbox" type="checkbox" unchecked>
+						<label for="/game_page/pause_menu/debug_page/targeted_block_group/checkbox">Targeted Block</label>
+					</div>
+					<div class="SettingsCheckbox" id="/game_page/pause_menu/debug_page/player_bounding_box_group">
+						<input id="/game_page/pause_menu/debug_page/player_bounding_box_group/checkbox" type="checkbox" unchecked>
+						<label for="/game_page/pause_menu/debug_page/player_bounding_box_group/checkbox">Player Bounding Box</label>
+					</div>
+					<div class="SettingsCheckbox" id="/game_page/pause_menu/debug_page/player_collisions_group">
+						<input id="/game_page/pause_menu/debug_page/player_collisions_group/checkbox" type="checkbox" unchecked>
+						<label for="/game_page/pause_menu/debug_page/player_collisions_group/checkbox">Player Collisions</label>
+					</div>
+					<div class="SettingsCheckbox" id="/game_page/pause_menu/debug_page/chunk_border_group">
+						<input id="/game_page/pause_menu/debug_page/chunk_border_group/checkbox" type="checkbox" unchecked>
+						<label for="/game_page/pause_menu/debug_page/chunk_border_group/checkbox">Chunk Boundaries</label>
+					</div>
+					<!-- Electron only -->
+					<div class="SettingsCheckbox" id="/game_page/pause_menu/debug_page/dev_tools_group" style="visibility: hidden; display: none;">
+						<input id="/game_page/pause_menu/debug_page/dev_tools_group/show_dev_tools_checkbox" type="checkbox" unchecked>
+						<label for="/game_page/pause_menu/debug_page/dev_tools_group/show_dev_tools_checkbox">Show Dev Tools</label>
+					</div>
+				</div>
+			</div>
+
+			<!-- Audio Files -->
+			<!-- 		<audio id="some_sound" src="./assets/audio/some_source.mp3"></audio> -->
+			<!-- End Audio Files -->
+			<canvas id="/game_page/main_canvas" tabindex="0"></canvas>
+		</div>
+
+		<a id="/download_link"></a>
+		<script src="./js/index.mjs" type="module" defer></script>
+	</body>
+</html>
