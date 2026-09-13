@@ -1,1 +1,36 @@
 <!DOCTYPE html>
+<html lang="en-US">
+	<head>
+		<meta charset="UTF-8"/>
+		<link rel="icon" type="image/svg+xml" href="./assets/icon.png"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<link rel="stylesheet" href="./index.css"/>
+		<title>BlockGameTemp</title>
+    <script defer>
+      const side_bar_element = document.getElementById("side_bar");
+	    const screen_width = window.screen.width * window.devicePixelRatio;
+	    side_bar_element.style.minWidth = screen_width * 0.2;
+    </script>
+</head>
+<body>
+	<div id="side_bar">
+		<div id="side_bar_header">
+			<h2>Select Version:</h2>
+			<div id="version_selection_header_underline"></div>
+			<div id="current_version">
+				<pre id="current_version_text">Current version: </pre>
+				<a class="VersionLink" id="current_version_link" href="./versions/0.0.0">0.0.0</a>
+			</div>
+		</div>
+		<div id="versions_list">
+			<a class="VersionLink" href="./versions/0.0.0">0.0.0</a>
+		</div>
+		<div id="side_bar_footer">
+			<p></p>
+		</div>
+	</div>
+	<div id="right_side_content">
+
+	</div>
+</body>
+</html>
