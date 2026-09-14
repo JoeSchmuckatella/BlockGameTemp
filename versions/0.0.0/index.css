@@ -1,0 +1,97 @@
+html {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	font-size: 20pt;
+	font-family: monospace;
+	color: white;
+	display: inline-grid;
+	gap: 0;
+	grid-template: "a b";
+	grid-template-columns: 1fr 3fr;
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+
+button {
+	border-radius: 0;
+	border: none;
+	background-color: darkgray;
+	color: white;
+	font-family: monospace;
+}
+
+#side_bar {
+	background-color: rgb(20, 20, 20);
+	height: 100%;
+	width: 100%;
+	height: 100%;
+	padding: 10px;
+	margin: 0;
+	grid-area: a;
+	grid-column-start: 1;
+}
+
+#side_bar_header {}
+
+#version_selection_header_underline {
+	height: 3px;
+	width: 95%;
+	background-image: linear-gradient(90deg, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+	margin-bottom: 1%;
+}
+
+#current_version {
+	display: inline-grid;
+ 	grid-template-columns: auto auto; 
+}
+
+#current_version_text {
+	grid-column-start: 1;
+	display: block;
+}
+
+#current_version_link {
+	grid-column-start: 2;
+	display: block;
+	align-content: center;
+	text-align: center;
+	margin: 0;
+	padding: 0;
+}
+
+#versions_list {}
+
+#side_bar_footer {}
+
+#right_side_content {
+	background-image: url("../../lib/goodvibes/textures/background.png");
+	background-size: 55%;
+	image-rendering: pixelated;
+	grid-column-start: 2;
+	height: 100%;
+	padding: 10px;
+	grid-area: b;
+}
+
+#copyright_notice {
+	z-index: 1001;
+	position: absolute;
+	padding: 10px;
+	bottom: 0;
+	left: 0;
+	margin: 0;
+	font-size: 14pt;
+}
