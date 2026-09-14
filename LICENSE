@@ -1,0 +1,40 @@
+PROPRIETARY LICENSE
+
+1. PROPRIETARY CODE AND ASSETS LICENSE
+Except as articulated in Seciton 2 and Section 3 below, all code and assets in
+this repository are proprietary. It may still be forked, cloned, etc. as
+permitted under Github's Terms of Service.
+
+2. THIRD-PARTY OPEN-SOURCE SOFTWARE
+This repository contains third-party open-source software libraries located
+within the following directories:
+ - /lib/cbor/1.6.4
+ - /lib/three/0.181.0
+ - /lib/zstd/1.0.3
+These specific third-party libraries are not subject to the proprietary terms of
+Section 1. Instead, they are governed by their respective open-source licenses
+as can be found in their respective directories.
+
+You are solely responsible for complying with the terms and conditions set forth 
+by those third-party licenses when interacting with those directories.
+
+Note that some of the code in those folders has been modified from its original
+source. The modifications were minimal and purely for my convenience. As far as
+I am concerned, the modifications are the intellectual property of the original
+licensor and fall under the license of each respective library.
+
+3. THIRD-PARTY OPEN-SOURCE ASSETS
+This repository contains third-party open-source assets (such as images and
+models) located within the following directories:
+ - /lib/goodvibes
+These specific third-party assets are not subject to the proprietary terms of
+Section 1. Instead, they are governed by their respective open-source licenses
+as can be found in their respective directories.
+
+You are solely responsible for complying with the terms and conditions set forth 
+by those third-party licenses when interacting with those directories.
+
+Note that some of the assets have been modified, or are derived from other
+third-party assets. As far as I am concerned, the modified and derived assets
+are the intellectual property of the original licensor and fall under the
+license found in each respective directory.
