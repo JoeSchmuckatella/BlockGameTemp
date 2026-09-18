@@ -9,7 +9,8 @@ the changes made to and derivations made from assets the GoodVibes texture pack:
  - The redstone_ore.png texture was renamed to carbuncle_matrix.png.
  - The grass_block_side.png texture was renamed to sod_block_side.png.
  - The grass_block_top.png texture was renamed to sod_block_top.png.
- - The acacia_planks.png texture was renamed to oak_boards.png.
+ - The acacia_planks.png texture was renamed to oak_boards.png and rotated as
+   oak_boards_rotated.png.
  - The pickaxe model is derived from iron_pickaxe.png.
  - The magma.png texture was derived from lava_still.png.
  - The main_menu_background.png image is derived from coal.png, coal_block.png,
