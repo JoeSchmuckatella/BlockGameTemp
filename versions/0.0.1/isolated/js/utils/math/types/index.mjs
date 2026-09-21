@@ -1,1 +1,0 @@
-"use strict";export*from"./point_2.mjs";export{Point3,NULL as NULL_POINT_3}from"./point_3.mjs";export*from"./quaternion.mjs";export{Vec2,NULL as NULL_VEC_2}from"./vec_2.mjs";export{Vec3,NULL as NULL_VEC_3}from"./vec_3.mjs";

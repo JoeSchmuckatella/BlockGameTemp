@@ -1,1 +1,0 @@
-"use strict";export class Point2{x;y;constructor(x=0,y=0){this.x=x;this.y=y}distance(p){return Math.sqrt(this.distance_sq(p))}distance_sq(p){return(this.x-p.x)**2+(this.y-p.y)**2}}export const NULL=new Point2;
