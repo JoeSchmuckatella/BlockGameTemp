@@ -1,0 +1,1 @@
+"use strict";export const NULL_ARRAY=[];export const NULL_INT32_ARRAY=new Int32Array;export const NULL_MAP=new Map;export const NULL_OBJ={};export const NULL_STR="";export const NULL_UINT16_ARRAY=new Uint16Array;export const NULL_UINT32_ARRAY=new Uint32Array;export const NULL_UINT8_ARRAY=new Uint8Array;
