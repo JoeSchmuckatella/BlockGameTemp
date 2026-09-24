@@ -1,0 +1,31 @@
+
+a {
+	color: rgb(150, 150, 255);
+}
+
+body {
+	font-family: monospace;
+	font-size: 14;
+	overflow-x: hidden;
+	background-color: black;
+	color: white;
+	margin: 1%;
+}
+
+h1 {
+	font-size: 22;
+}
+
+h3 {
+	font-size: 18;
+}
+
+p {
+	line-height: 1;
+}
+
+.Break {
+	height: 1px;
+	margin: 0;
+	padding: 0;
+}
