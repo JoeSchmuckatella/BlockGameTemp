@@ -1,0 +1,1 @@
+"use strict";export let VERSION;try{const url=new URL("../.version",import.meta.url);const response=await fetch(url);if(!response.ok){throw new Error(`HTTP error. Status: ${response.status}`)}VERSION=await response.text()}catch(e){console.error("ERROR: Couldn't get game version, ",e);VERSION="Null"}
