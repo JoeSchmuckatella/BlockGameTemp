@@ -72,7 +72,11 @@ button {
 	padding: 0;
 }
 
-#versions_list {}
+#versions_list {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+}
 
 #side_bar_footer {}
 
