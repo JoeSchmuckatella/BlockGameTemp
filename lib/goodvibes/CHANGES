@@ -1,8 +1,10 @@
 As specified in Section 3 of the Creative Commons Attribution License, below are
-the changes made to and derivations made from assets the GoodVibes texture pack:
+the changes made to and derivations made from assets in the GoodVibes texture
+pack:
 
  - The tab icon is derived from iron_sword.png and iron_pickaxe.png.
- - The oak_leaves.png texture was modified by adding color.
+ - The oak_leaves.png and oak_leaves_no_alpha.png textures were modified by
+   adding color.
  - The coal_ore.png texture was renamed to coal_matrix.png.
  - The acacia_log.png texture was renamed to oak_log.png.
  - The acacia_log_top.png texture was renamed to oak_log_top.png.
@@ -15,3 +17,15 @@ the changes made to and derivations made from assets the GoodVibes texture pack:
  - The magma.png texture was derived from lava_still.png.
  - The main_menu_background.png image is derived from coal.png, coal_block.png,
    iron_ore.png, peridot_ore.png, redstone_ore.png, and stone.png.
+ - The carbuncle_in_matrix.glb model was derived from the redstone_ore.png
+   texture.
+ - The coal_in_matrix.glb model was derived from the coal_ore.png texture.
+ - The dirt_block.glb model was derived from the dirt.png texture.
+ - The hematite_block.glb model was derived from the iron_ore.png texture.
+ - The oak_boards.glb model was derived from the acacia_planks.png texture.
+ - The oak_leaf_block.glb model was derived from the oak_leaves.png texture.
+ - The oak_log.glb model was derived from the acacia_log.png and 
+   acacia_log_top.png textures.
+ - The sand_block.glb model was derived from the sand.png texture.
+ - The snow_block.glb model was derived from the snow.png texture.
+ - The stone_block.glb model was derived from the stone.png texture.
