@@ -1,0 +1,1 @@
+"use strict";export class Block{static ID=0;static NAME="Null";static OPACITY=255;static REPLACEABLE=false;static SOLID=true;static BLOCK_KEY_ALIASES={};count;idx;class;hash;constructor(){this.count=0;this.idx=-1}set_hash(){}}
