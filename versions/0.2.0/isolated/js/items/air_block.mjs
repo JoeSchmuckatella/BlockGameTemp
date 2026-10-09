@@ -1,0 +1,1 @@
+"use strict";import{Item}from"./item.mjs";export class AirBlock extends Item{static ID=2;static NAME="Air";static CATEGORY=0;static BASE_MASS=.333;get mass(){return AirBlock.BASE_MASS}class;constructor(count=1){super(count);this.class=AirBlock;this.hash=BigInt(AirBlock.ID)}}

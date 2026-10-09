@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<link rel="stylesheet" href="./css/credits.css"/>
+	<title></title>
+	<script type="module" defer>
+		import {VERSION} from "./js/version.mjs";
+
+		document.title = `Block Game Temp. ${VERSION} Release Notes`;
+		const elems = document.getElementsByClassName("Version");
+		for (let i = 0; i < elems.length; i++) {
+			elems[i].innerText = VERSION;
+		}
+	</script>
+</head>
+<body>
+	<h3>Version <span class="Version"></span> Release Notes:</h3>
+	<pre>
+ - Added a basic "Sandbox Mode" inventory.
+ - Added sand and snow blocks.
+ - Added visible items for blocks.
+	</pre>
+</body>
+</html>

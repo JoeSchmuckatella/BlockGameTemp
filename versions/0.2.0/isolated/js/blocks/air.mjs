@@ -1,0 +1,1 @@
+"use strict";import{Block}from"./block.mjs";export class Air extends Block{static ID=1;static NAME="Air";static OPACITY=0;static REPLACEABLE=true;static SOLID=false;class;hash;constructor(){super();this.class=Air;this.hash=BigInt(Air.ID)}clone(){const new_air=new Air;new_air.count=this.count;new_air.idx=this.idx;return new_air}}

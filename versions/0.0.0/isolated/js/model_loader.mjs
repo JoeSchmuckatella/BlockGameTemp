@@ -1,0 +1,1 @@
+"use strict";import{GLTFLoader}from"three/examples/jsm/loaders/GLTFLoader.js";export class ModelLoader{loader=new GLTFLoader;models={pickaxe:void 0};load_models(on_load){this.loader.load("../../../lib/goodvibes/models/pickaxe.glb",model=>{const mesh=model.scene;this.models.pickaxe=mesh;on_load(this.models)},void 0,void 0)}}

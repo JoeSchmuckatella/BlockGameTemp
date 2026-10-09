@@ -1,0 +1,103 @@
+
+.DbgInfo {
+	visibility: hidden;
+	display: none;
+	padding-left: 8px;
+	margin: 0;
+	line-height: 1.1;
+}
+
+.HotbarIcon {
+	width: 64px;
+	height: 64px;
+	outline: 4px solid rgb(58, 58, 58);
+	image-rendering: pixelated;
+}
+
+.HotbarIcon.Selected {
+	outline: 4px solid white;
+}
+
+.HudItem {
+	z-index: 100;
+}
+
+.MainMenuBox {
+	background-color: rgb(50, 50, 50);
+	border: 3px solid;
+	border-color: white;
+	padding: 20px;
+	align-items: center;
+	position: absolute;
+	top: 30%;
+	left: 25%;
+	width: 50%;
+	height: 40%;
+	display: inline-grid;
+	justify-content: center;
+}
+
+.MainMenuButton {
+	width: 400px;
+	font-family: monospace;
+	font-size: 16pt;
+	background-color: rgb(150, 150, 150);
+	color: white;
+	border-radius: 0;
+	border-color: white;
+	padding: 10px;
+}
+
+.PauseMenuInterface {
+	display: grid;
+	grid-template-columns: 100%;
+}
+
+.PauseMenuButton {
+	font-family: monospace;
+	font-size: 16pt;
+	width: 60%;
+	border-radius: 0;
+	padding: 2%;
+	margin: 1%;
+	text-align: left;
+	padding: 5px;
+	background-color: rgba(255, 255, 255, 0);
+	border-color: white;
+	color: white;
+	border: 2px solid;
+	box-shadow: 0;
+}
+
+.SettingsSlider {
+	font-family: monospace;
+	zoom: 1.25;
+	color: white;
+	padding-left: 4px;
+	font-size: 16pt;
+}
+
+.SettingsSliderInner {
+	display: flex;
+	align-items: center;
+	height: 20px;
+}
+
+.SettingsCheckbox{
+	display: flex;
+	align-items: center;
+	height: 20px;
+	color: white;
+	zoom: 1.25;
+	font-family: monospace;
+	font-size: 16pt;
+}
+
+.TopLevelPage {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	align-items: center;
+}

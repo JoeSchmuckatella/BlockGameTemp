@@ -1,0 +1,1 @@
+"use strict";import{Block}from"./block.mjs";export class Null extends Block{static OPACITY=0;class;hash;constructor(){super();this.class=Null;this.hash=BigInt(Null.ID)}clone(){const new_null=new Null;new_null.count=this.count;new_null.idx=this.idx;return new_null}}

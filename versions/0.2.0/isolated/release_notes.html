@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<link rel="stylesheet" href="./css/credits.css"/>
+	<title></title>
+	<script type="module" defer>
+		import {VERSION} from "./js/version.mjs";
+
+		document.title = `Block Game Temp. ${VERSION} Release Notes`;
+		const elems = document.getElementsByClassName("Version");
+		for (let i = 0; i < elems.length; i++) {
+			elems[i].innerText = VERSION;
+		}
+	</script>
+</head>
+<body>
+	<h3>Version <span class="Version"></span> Release Notes:</h3>
+	<pre>
+ - Added Sand Desert and Tundra biomes.
+ - Expanded world from 2x2 chunks to 3x3 chunks.
+ - Tweaked world generation.
+ - Put items in inventory in a more intuitive order.
+ - Player now spawns in facing North.
+ - Temporarily fixed a performance issue causing frame drops when raycasting
+   into 2 chunks with lots of trees.
+	</pre>
+</body>
+</html>

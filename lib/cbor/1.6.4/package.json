@@ -1,0 +1,47 @@
+{
+  "name": "cbor-x",
+  "author": "Kris Zyp",
+  "version": "1.6.4",
+  "description": "Ultra-fast and conformant CBOR (RFC 8949) implementation with support for numerous tag extensions including records and structured cloning",
+  "license": "MIT",
+  "types": "./index.d.ts",
+  "main": "./index.mjs",
+  "module": "./index.mjs",
+  "keywords": [
+    "CBOR",
+    "performance",
+    "structured",
+    "clone"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/kriszyp/cbor-x"
+  },
+  "type": "module",
+  "exports": {
+    ".": {
+      "default": "./index.mjs"
+    },
+    "./encode": {
+      "node": {
+        "import": "./index.mjs",
+      },
+      "default": {
+        "import": "./index.mjs"
+      }
+    },
+    "./decode": {
+      "default": {
+        "import": "./index.mjs"
+      }
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "*.md",
+    "/*.mjs",
+  ],
+  "browser": {
+    "node:buffer": false
+  },
+}
