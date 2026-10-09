@@ -44,7 +44,9 @@ button {
 	grid-column-start: 1;
 }
 
-#side_bar_header {}
+#side_bar_header {
+
+}
 
 #version_selection_header_underline {
 	height: 3px;
