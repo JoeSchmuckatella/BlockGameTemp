@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<title>BlockGameTemp</title>
+		<link rel="icon" type="image/svg+xml" href="../../lib/goodvibes/textures/icon.png"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<link rel="stylesheet" href="./isolated/css/classes.css"/>
+		<link rel="stylesheet" href="./isolated/css/elements.css"/>
+		<link rel="stylesheet" href="./isolated/css/ids.css"/>
+	</head>
+	<body>
+		<div class="TopLevelPage" id="/new_or_upload_game_page">
+			<div class="MainMenuBox" id="/new_or_upload_game_page/menu">
+				<button class="MainMenuButton" onclick="show_game_settings()" id="/new_or_upload_game_page/menu/new_game_button">New Game</button>
+				<button class="MainMenuButton" onclick="upload_saved_game()" id="/new_or_upload_game_page/menu/upload_saved_game_button">Upload Saved Game</button>
+				<button class="MainMenuButton" onclick="show_credits()" id="/new_or_upload_game_page/menu/credits_button">Credits</button>
+				<button class="MainMenuButton" onclick="show_release_notes()" id="/new_or_upload_game_page/menu/release_notes_button">Release Notes</button>
+				<button class="MainMenuButton" onclick="back_to_versions()" id="/new_or_upload_game_page/menu/back_to_versions_button">Back</button>
+			</div>
+			
+			<div id="/new_or_upload_game_page/game_file_input_div">
+				<input type="file" id="/new_or_upload_game_page/game_file_input_div/input" accept="application/x-tar">
+			</div>
+		</div>
+
+		<div class="TopLevelPage" id="/game_settings_page">
+			<div class="MainMenuBox" id="/game_settings_page/menu">
+				<div id="/game_settings_page_group/menu/save_name_input_group">
+					<label for="/game_settings_page/menu/save_name_input_group/input">Save name:</label>
+					<input id="/game_settings_page/menu/save_name_input_group/input" type="text" placeholder="New World">
+				</div>
+				<div id="/game_settings_page/menu/seed_input_group">
+					<label for="/game_settings_page/menu/seed_input_group/input">Seed:</label>
+					<input id="/game_settings_page/menu/seed_input_group/input" type="text">
+				</div>
+				<button class="MainMenuButton" onclick="start_new_game()">Start New Game</button>
+				<button class="MainMenuButton" onclick="back_to_new_or_upload_game_page()">Back</button>
+			</div>
+		</div>
+
+		<div class="TopLevelPage" id="/loading_screen_page">
+			<p id="/loading_screen_page/text"></p>
+		</div>
+		<p id="/version"></p>
+		<script src="./js/index.mjs" type="module" defer></script>
+	</body>
+</html>

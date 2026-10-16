@@ -1,0 +1,1 @@
+"use strict";import{NULL as NULL_BLOCK}from"../blocks/index.mjs";import{_Item}from"./item.mjs";export class Null extends _Item{static ID=0;static NAME="Null";static BLOCK=NULL_BLOCK;class;constructor(count=1){super(count);this.class=Null;this.hash=BigInt(Null.ID)}}
