@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<link rel="stylesheet" href="./css/credits.css"/>
+	<title></title>
+	<script type="module" defer>
+		import {VERSION} from "./js/version.mjs";
+
+		document.title = `Block Game Temp. ${VERSION} Release Notes`;
+		const elems = document.getElementsByClassName("Version");
+		for (let i = 0; i < elems.length; i++) {
+			elems[i].innerText = VERSION;
+		}
+	</script>
+</head>
+<body>
+	<h3>Version <span class="Version"></span> Release Notes:</h3>
+	<pre>
+ - Added audio for when blocks are broken.
+ - Added a master volume control to the settings page.
+ - Set the default hotbar slot to slot 1 from slot 10.
+ - Fixed a bug preventing the freecam from working.
+	</pre>
+</body>
+</html>
