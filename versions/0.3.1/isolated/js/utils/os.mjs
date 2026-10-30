@@ -1,0 +1,1 @@
+"use strict";export const IS_LITTLE_ENDIAN=(()=>{const tmp_buf=new ArrayBuffer(2);const tmp_view=new DataView(tmp_buf);const tmp_arr=new Uint16Array(tmp_buf);tmp_arr[0]=255;if(tmp_view.getUint8(0)){return true}else{return false}})();

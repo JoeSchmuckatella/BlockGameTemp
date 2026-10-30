@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<link rel="stylesheet" href="./css/credits.css"/>
+	<title></title>
+	<script type="module" defer>
+		import {VERSION} from "./js/version.mjs";
+
+		document.title = `Block Game Temp. ${VERSION} Release Notes`;
+		const elems = document.getElementsByClassName("Version");
+		for (let i = 0; i < elems.length; i++) {
+			elems[i].innerText = VERSION;
+		}
+	</script>
+</head>
+<body>
+	<h3>Version <span class="Version"></span> Release Notes:</h3>
+	<pre>
+ - Swapped the Three.js raycaster for a custom DDA raycaster, eliminating frame
+   stuttering.
+ - Changed block and item types to prevent megamorphism in functions.
+ - Fixed a bug causing checksum errors in the TAR library.
+ - Tweaked new game menu.
+	</pre>
+</body>
+</html>
