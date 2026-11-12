@@ -1,0 +1,1 @@
+"use strict";import{NULL_BIGINT}from"../utils/constants.mjs";export const DEFAULT_METADATA={uuid:"0default0save0uuid00000000",name:"New World",seed:NULL_BIGINT,game_time:0};export let METADATA;export function reset_metadata(){METADATA=structuredClone(DEFAULT_METADATA)}

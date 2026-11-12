@@ -1,0 +1,1 @@
+"use strict";import{CHUNK_SIDE_LENGTH}from"../chunk/constants.mjs";export const SEA_LEVEL=0;export const WORLD_X_MAX=2*CHUNK_SIDE_LENGTH;export const WORLD_X_MIN=-(1*CHUNK_SIDE_LENGTH);export const WORLD_Y_MAX=WORLD_X_MAX;export const WORLD_Y_MIN=WORLD_X_MIN;export const WORLD_Z_MAX=3*CHUNK_SIDE_LENGTH;export const WORLD_Z_MIN=-3*CHUNK_SIDE_LENGTH;

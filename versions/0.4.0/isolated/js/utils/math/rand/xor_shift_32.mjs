@@ -1,0 +1,1 @@
+"use strict";export class XorShift32{_state;constructor(seed){this._state=seed||1}random(){this._state^=this._state<<13;this._state^=this._state>>17;this._state^=this._state<<5;this._state=this._state>>>0;return this._state}}

@@ -1,0 +1,1 @@
+"use strict";import{NULL_OBJ,NULL_STR}from"../utils/constants.mjs";export function ItemPrototype(static_fields,count){this.count=count;this.hash=0n;this.class=static_fields;this.alias=NULL_STR;this.specialized=NULL_OBJ}
